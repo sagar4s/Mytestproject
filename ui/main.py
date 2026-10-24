@@ -70,8 +70,6 @@ def run():
         ssl_verify = False if server_name == "0.0.0.0" else True
         with gr.Blocks(
             title=f"{roop.metadata.name} {roop.metadata.version}",
-            theme=roop.globals.CFG.selected_theme,
-            css=mycss,
             delete_cache=(60, 86400),
         ) as ui:
             with gr.Row(variant="compact"):
@@ -96,6 +94,9 @@ def run():
                 ssl_verify=ssl_verify,
                 prevent_thread_lock=True,
                 show_error=True,
+                # Gradio 6: app-level theme/css moved from gr.Blocks() to launch()
+                theme=roop.globals.CFG.selected_theme,
+                css=mycss,
             )
         except Exception as e:
             print(f"Exception {e} when launching Gradio Server!")
