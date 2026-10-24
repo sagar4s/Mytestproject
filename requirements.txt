@@ -1,20 +1,23 @@
---extra-index-url https://download.pytorch.org/whl/cu124
+--extra-index-url https://download.pytorch.org/whl/cu130
+
+# numpy stays on 1.26.x: insightface 0.7.3 does not work with numpy 2.x
 numpy==1.26.4
-gradio==5.9.1
-opencv-python-headless==4.10.0.84
-onnx==1.16.1
+gradio==6.30.0
+# 4.11.x is the last OpenCV line that still supports numpy 1.x
+opencv-python-headless==4.11.0.86
+onnx>=1.21.0
 insightface==0.7.3
-albucore==0.0.16
-psutil==5.9.6
-torch==2.5.1+cu124; sys_platform != 'darwin'
-torch==2.5.1; sys_platform == 'darwin'
-torchvision==0.20.1+cu124; sys_platform != 'darwin'
-torchvision==0.20.1; sys_platform == 'darwin'
-onnxruntime==1.20.2; sys_platform == 'darwin' and platform_machine != 'arm64'
-onnxruntime-silicon==1.20.2; sys_platform == 'darwin' and platform_machine == 'arm64'
-onnxruntime-gpu==1.20.2; sys_platform != 'darwin'
-tqdm==4.66.4
+albucore>=0.0.16
+psutil>=5.9.6
+
+torch==2.14.1
+torchvision==0.29.1
+
+onnxruntime>=1.23.0; sys_platform == 'darwin'
+onnxruntime-gpu>=1.23.0; sys_platform != 'darwin'
+
+tqdm>=4.66.4
 ftfy
 regex
 pyvirtualcam
-pydantic==2.10.4
+pydantic>=2.10.4

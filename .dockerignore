@@ -1,0 +1,9 @@
+.git
+.venv
+__pycache__
+*.pyc
+models
+output
+config.yaml
+*.onnx
+*.pth
