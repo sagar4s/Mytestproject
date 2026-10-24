@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # This script checks and installs all dependencies which are needed to run roop-unleashed. After that, it clones the repo.
-# Execute this easily with /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/PJF16/roop-unleashed/master/installer/macOSinstaller.sh)
+# Execute this easily with /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/sagar4s/Mytestproject/main/installer/macOSinstaller.sh)
 
 # Function to check if a command exists
 command_exists() {
@@ -55,8 +55,8 @@ else
 fi
 
 # Clone the repository
-REPO_URL="https://codeberg.org/roop-unleashed/roop-unleashed.git"
-REPO_NAME="roop-unleashed"
+REPO_URL="https://github.com/sagar4s/Mytestproject.git"
+REPO_NAME="Mytestproject"
 
 echo "Cloning the repository $REPO_URL..."
 git clone $REPO_URL
