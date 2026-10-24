@@ -33,7 +33,7 @@ def install_dependencies():
 
     # Install Git and clone repo
     run_cmd("conda install -y -k git")
-    run_cmd("git clone https://github.com/sagar4s/Mytestproject.git")
+    run_cmd("git clone https://codeberg.org/roop-unleashed/roop-unleashed.git")
     os.chdir(MY_PATH)
     run_cmd("git checkout main")
     # Installs dependencies from requirements.txt
@@ -66,7 +66,7 @@ def start_app():
 if __name__ == "__main__":
     global MY_PATH
 
-    MY_PATH = "Mytestproject"
+    MY_PATH = "roop-unleashed"
 
     # Verifies we are in a conda environment
     check_env()
